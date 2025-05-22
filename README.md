@@ -35,13 +35,37 @@ To build a secure web component that allows users to upload files (e.g., documen
 
 ---
 
-## 🖥️ UI Preview
+## 🖼️ UI Preview
 
-> 📸 Add screenshots of:
-> - The upload form
-> - A success message
-> - A blocked file attempt
-> - Your `upload.log` entries
+Here are examples of the secure upload system in action:
+
+### 1. Rejected File Type (e.g., `.php`)
+<img src="screenshots/1-rejected-file-type.png" width="600"/>
+> Attempting to upload unsupported files like `.php`, `.exe`, or `.html` triggers MIME-based blocking.
+
+---
+
+###  2. Oversized File Upload (>2MB)
+<img src="screenshots/2-oversized-file.png" width="600"/>
+> Files larger than 2MB are automatically rejected with a styled error message.
+
+---
+
+###  3. Rate Limiting Triggered
+<img src="screenshots/3-rate-limit.png" width="600"/>
+> After 5 uploads in a 15-minute window, users are rate-limited to prevent DoS-style spamming.
+
+---
+
+### 4. Renamed Files in `/uploads/` Folder
+<img src="screenshots/4-renamed-uploads-folder.png" width="600"/>
+> Uploaded files are renamed using cryptographic random strings — original filenames are never exposed or reused.
+
+---
+
+### 📄 5. Logged Upload Attempts (`upload.log`)
+<img src="screenshots/5-upload-log.png" width="600"/>
+> Each upload — success or failure — is logged with IP, file name, result, and reason.
 
 ---
 
