@@ -3,7 +3,7 @@
 A real-world secure document upload system built with Node.js and Express.  
 This project demonstrates how to safely handle file uploads by applying layered security best practices.
 
-> ✅ Mitigates common threats like RCE, XSS, DoS, malware uploads, and directory traversal.
+> Mitigates common threats like RCE, XSS, DoS, malware uploads, and directory traversal.
 
 ---
 
